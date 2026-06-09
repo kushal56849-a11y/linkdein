@@ -101,7 +101,7 @@
                     <a href="#"><img src="images/premium.png">Try premium</a>
                 </div>
           </div>
-            <div class="sidebar-activity">
+            <div class=" sidebar-activity" id="sidebaractivity">
              <h3>RECENT</h3>
              <a href="#"><img src="images/recent.png">Web Development</a>
              <a href="#"><img src="images/recent.png">User Interface</a>
@@ -122,7 +122,7 @@
                 <a href="#">Discover more</a>
               </div>
             </div>
-           
+           <P id="showmorelink" onclick="toogleactivity()"></P><b></b>+</P>
         </div>
         <!-----------------------main content---------->
         <div class="main-content">
@@ -394,6 +394,27 @@
       function toggleMenu(){
         profilemenu.classList.toggle("open-menu");
       }
-   </script> 
+   </script>
+<script>
+    let sideactivity=document.getElementById("sidebaractivity");
+    let morelink=document.getElementById("showmorelink");
+
+    function toogleactivity(){
+    sideactivity.classList.toogle("open-activity");
+        
+          if(slideactivity.classList.contains("open-activity")){
+            morelink.innerHTML="show less <b>-</b>"
+          }
+          else{
+            morelink.innerHTML="show more <b>+</b>";
+          }
+
+    }
+
+
+</script>
+   
+   
+
 </body>
 </html>
